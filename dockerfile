@@ -1,14 +1,14 @@
-# Use a imagem base do Java 21
+# Use a imagem base do Java 17
 FROM openjdk:17-jdk-slim as build
 
 # Define o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copia todo o conteúdo do diretório atual para o diretório de trabalho (/app) dentro do container
-COPY greetingsAPI .
+# Copiar apenas o JAR Spring Boot para o diretório /app
+COPY . .
 
 # Define o ponto de entrada da aplicação Spring Boot
-ENTRYPOINT ["java", "-jar", "target/greetingsAPI-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "greetingsAPI/target/greetingsAPI-0.0.1-SNAPSHOT.jar"]
 
 # Expõe a porta 8080 para o mundo externo
 EXPOSE 8080
