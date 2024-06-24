@@ -27,6 +27,7 @@ public class GreetingController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Greeting> findById(@PathVariable(value = "id") int greetingId) {
+        System.out.println("Getting greeting by id: " + greetingId);
         Greeting g = greetingService.findById(greetingId);
         if(g == null) return ResponseEntity.notFound().build();
         return ResponseEntity.ok().body(g);
