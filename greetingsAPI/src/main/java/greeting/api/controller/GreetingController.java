@@ -16,7 +16,6 @@ public class GreetingController {
     @Autowired
     public GreetingController(GreetingService greetingService) {
         this.greetingService = greetingService;
-        System.out.println("GreetingController created12321");
     }
 
     @GetMapping
