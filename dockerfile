@@ -1,4 +1,4 @@
-# Use the official OpenJDK 21 image
+# Use the official OpenJDK 21 image from AdoptOpenJDK
 FROM adoptopenjdk/openjdk21:alpine-slim
 
 # Set the working directory inside the container
