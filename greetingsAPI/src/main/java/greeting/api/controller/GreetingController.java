@@ -21,6 +21,7 @@ public class GreetingController {
 
     @GetMapping
     public List<Greeting> getAllGreetings() {
+        System.out.println("Getting all greetings");
         return greetingService.findAll();
     }
 
