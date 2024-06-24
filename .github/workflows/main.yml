@@ -37,8 +37,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t ${{ secrets.GCR_HOSTNAME }}/${{ secrets.GCP_PROJECT_ID }}/dynamic-web:latest .
-        docker push ${{ secrets.GCR_HOSTNAME }}/${{ secrets.GCP_PROJECT_ID }}/dynamic-web:latest
+        docker build -t ${{ secrets.GCR_HOSTNAME }}/${{ secrets.GCP_PROJECT_ID }}/greetings:latest .
+        docker push ${{ secrets.GCR_HOSTNAME }}/${{ secrets.GCP_PROJECT_ID }}/greetings:latest
 
   deploy:
     runs-on: ubuntu-latest
