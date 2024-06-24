@@ -1,5 +1,5 @@
-# Use the official OpenJDK 21 image from AdoptOpenJDK
-FROM adoptopenjdk/openjdk21:alpine-slim
+# Use the official OpenJDK 17 image from Docker Hub (Alpine variant)
+FROM openjdk:17-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
