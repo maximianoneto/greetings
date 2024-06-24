@@ -8,7 +8,7 @@ WORKDIR /app
 COPY ./target/greetingsAPI-0.0.1-SNAPSHOT.jar /app/greetingsAPI.jar
 
 # Expose port 8080 to the outside world
-EXPOSE 8080
+EXPOSE 8081
 
 # Command to run the jar file
 CMD ["java", "-jar", "greetingsAPI.jar"]
