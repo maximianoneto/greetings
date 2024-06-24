@@ -5,7 +5,7 @@ FROM openjdk:17-alpine
 WORKDIR /app
 
 # Copy the packaged jar file into the container at path /app
-COPY target/greetingsAPI-0.0.1-SNAPSHOT.jar /app/greetingsAPI.jar
+COPY ./target/greetingsAPI-0.0.1-SNAPSHOT.jar /app/greetingsAPI.jar
 
 # Expose port 8080 to the outside world
 EXPOSE 8080
